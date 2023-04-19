@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Application.Persistance.Contracts
 {
-    public interface IILeaveRequestRepository : IGeneric_Repository<Leave_Request>
+    public interface ILeave_Request_Repository : IGeneric_Repository<Leave_Request>
     {
 
 
