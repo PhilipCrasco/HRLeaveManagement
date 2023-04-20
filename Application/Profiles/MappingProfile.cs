@@ -2,6 +2,7 @@
 using Application.DTO_s.Common;
 using Application.DTO_s.Leave_Allocation;
 using Application.DTO_s.Leave_Request;
+using Application.DTO_s.Leave_Types;
 using AutoMapper;
 using Domain;
 using System;
@@ -12,17 +13,27 @@ using System.Threading.Tasks;
 
 namespace Application.Profiles
 {
-    public class Mapping_Profile : Profile  // AutoMapper SetUp
+    public class MappingProfile : Profile  // AutoMapper SetUp
     {
 
-        public Mapping_Profile()
+        public MappingProfile()
         {
-            CreateMap<LeaveRequest, Leave_Request_Dto>().ReverseMap();
-            CreateMap<LeaveRequest, Leave_Request_List_Dto>().ReverseMap();
-            CreateMap<LeaveRequest, Create_Leave_Request_Dto>().ReverseMap();
-            CreateMap<LeaveType, Leave_Type_Dto>().ReverseMap();
-            CreateMap<LeaveAllocation , Leave_Allocation_Dto>().ReverseMap();
-            CreateMap<LeaveAllocation, Create_Leave_Allocation_Dto>().ReverseMap();
+            //Leave Request
+
+            CreateMap<LeaveRequest, LeaveRequestDto>().ReverseMap();
+            CreateMap<LeaveRequest, LeaveRequestListDto>().ReverseMap();
+            CreateMap<LeaveRequest, CreateLeaveRequestDto>().ReverseMap();
+
+
+            //LeaveAllocation
+
+            CreateMap<LeaveAllocation, LeaveAllocationDto>().ReverseMap();
+            CreateMap<LeaveAllocation, CreateLeaveAllocationDto>().ReverseMap();
+
+
+            // LeaveType
+            CreateMap<LeaveType, LeaveTypeDto>().ReverseMap();
+            CreateMap<LeaveType, CreateLeaveTypeDto>().ReverseMap();
         }
 
 
