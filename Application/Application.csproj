@@ -6,6 +6,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Features\Leave_Request\Handler\Queries\Get_Leave_Request_List_Request_Handler.cs~RF76376d.TMP" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
     <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.1.0" />
   </ItemGroup>
@@ -15,12 +19,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Features\Leave_Allocation\Handler\Command\" />
-    <Folder Include="Features\Leave_Allocation\Request\Command\" />
+    <Folder Include="Features\Leave_Allocations\Handler\Command\" />
+    <Folder Include="Features\Leave_Allocations\Request\Command\" />
     <Folder Include="Features\Leave_Request\Handler\Command\" />
     <Folder Include="Features\Leave_Request\Request\Command\" />
-    <Folder Include="Features\Leave_Types\Handler\Commands\" />
-    <Folder Include="Features\Leave_Types\Request\Command\" />
   </ItemGroup>
 
 </Project>
