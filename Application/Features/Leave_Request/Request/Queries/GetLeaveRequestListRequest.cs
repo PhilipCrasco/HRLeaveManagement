@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Application.Features.Leave_Request.Request.Queries
 {
-    public class Get_Leave_Request_List_Request : IRequest<List<LeaveRequestListDto>>
+    public class GetLeaveRequestListRequest : IRequest<List<LeaveRequestListDto>>
     {
 
     }

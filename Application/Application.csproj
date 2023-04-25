@@ -11,18 +11,12 @@
 
   <ItemGroup>
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.5.2" />
     <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.1.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Domain\Domain.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Features\Leave_Allocations\Handler\Command\" />
-    <Folder Include="Features\Leave_Allocations\Request\Command\" />
-    <Folder Include="Features\Leave_Request\Handler\Command\" />
-    <Folder Include="Features\Leave_Request\Request\Command\" />
   </ItemGroup>
 
 </Project>

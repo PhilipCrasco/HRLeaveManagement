@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Application
 {
-    public static class Application_Services_Registration
+    public static class ApplicationServicesRegistration
     {
         public static IServiceCollection ConfigureApplicationServices (this IServiceCollection services) // Dependency Injection with MediaR
         {

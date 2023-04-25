@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Application.Persistance.Contracts
 {
-    public interface ILeave_Type_Repository : IGenericRepository<LeaveType> // Interface
+    public interface ILeaveTypeRepository : IGenericRepository<LeaveType> // Interface
     {
 
         Task<LeaveType> Get_Leave_Type_With_Details(int Id);

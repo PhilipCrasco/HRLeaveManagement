@@ -1,6 +1,7 @@
 ﻿using Application.Features.Leave_Request.Request.Command;
 using Application.Persistance.Contracts;
 using AutoMapper;
+using Domain;
 using MediatR;
 using System;
 using System.Collections.Generic;
@@ -24,13 +25,29 @@ namespace Application.Features.Leave_Request.Handler.Command
 
         public async Task<Unit> Handle(UpdateLeaveRequestCommand request, CancellationToken cancellationToken)
         {
-            var leaverequest =  await _LeaveRequestRepository.Get(request.LeaveRequestDto.Id);
 
-            _mapper.Map(request.LeaveRequestDto, leaverequest);
+            var leaveRequest = await _LeaveRequestRepository.Get(request.Id);
 
-            await _LeaveRequestRepository.Update(leaverequest);
+            if (request.LeaveRequestDto != null)
+            {
+
+              
+                _mapper.Map(request.LeaveRequestDto, leaveRequest);
+
+                await _LeaveRequestRepository.Update(leaveRequest);
+
+            }
+            else if(request.changeLeaveRequestApprovalDto != null) 
+            {
+
+                await _LeaveRequestRepository.Change_Approval_Status(leaveRequest, request.changeLeaveRequestApprovalDto.Approved); //Get The Interface
+            }
 
             return Unit.Value;
+
+
+
+
         }
     }
 }

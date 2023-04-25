@@ -1,4 +1,5 @@
 ﻿using Application.DTO_s;
+using Application.DTO_s.Leave_Types;
 using MediatR;
 using System;
 using System.Collections.Generic;
@@ -10,6 +11,6 @@ namespace Application.Features.Leave_Types.Request.Command
 {
     public class CreateLeaveTypeCommand : IRequest<int>
     {
-        public LeaveTypeDto LeaveTypeDto { get; set; }
+        public CreateLeaveTypeDto LeaveTypeDto { get; set; }
     }
 }

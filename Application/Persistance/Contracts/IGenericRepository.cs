@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Application.Persistance.Contracts
 {
-    public interface IGeneric_Repository<T> where T : class  // Generic Interface
+    public interface IGenericRepository<T> where T : class  // Generic Interface
     {
 
         Task<T> Get(int Id );
@@ -14,8 +14,8 @@ namespace Application.Persistance.Contracts
         Task<IReadOnlyList<T>> GetAll();
         Task<T> Add(T entity);
         Task<T> Update(T entity);
-
         Task<T> Delete(T entity);
+        Task<bool> Exists(int Id);   
 
     }
 

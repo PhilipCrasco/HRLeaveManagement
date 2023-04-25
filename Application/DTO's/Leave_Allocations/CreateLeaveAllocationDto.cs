@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace Application.DTO_s.Leave_Allocation
 {
-    public class Create_Leave_Allocation_Dto : Base_Dto
+    public class CreateLeaveAllocationDto 
     {
 
         public int NumberOfDays { get; set; }
-        public int Leave_TypeId { get; set; }
+        public int LeaveTypeId { get; set; }
         public int Period { get; set; }
     }
 }

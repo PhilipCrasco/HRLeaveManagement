@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace Domain.Common
 {
-    public  abstract class Base_Domain_Entity
+    public  abstract class BaseDomainEntity
     {
         public int Id { get; set; }
-        public DateTime Date_Created { get; set; }
-        public string Created_By { get; set; }
-        public DateTime Last_Modification { get; set; }
-        public string Last_Modified { get; set; }   
+        public DateTime DateCreated { get; set; }
+        public string CreatedBy { get; set; }
+        public DateTime LastModification { get; set; }
+        public string LastModified { get; set; }   
 
 
     }

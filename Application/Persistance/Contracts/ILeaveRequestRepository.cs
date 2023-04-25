@@ -7,11 +7,12 @@ using System.Threading.Tasks;
 
 namespace Application.Persistance.Contracts
 {
-    public interface ILeave_Request_Repository : IGenericRepository<Leave_Request>
+    public interface ILeaveRequestRepository : IGenericRepository<LeaveRequest>
     {
 
-        Task<Leave_Request> Get_Leave_Request_With_Details(int Id);
-        Task<List<Leave_Request>> Get_Leave_Requests_With_Details();
+        Task<LeaveRequest> Get_Leave_Request_With_Details(int Id);
+        Task<List<LeaveRequest>> Get_Leave_Requests_With_Details();
+        Task Change_Approval_Status(LeaveRequest leaveRequest, bool? ApprovalStatus);
 
     }
 }

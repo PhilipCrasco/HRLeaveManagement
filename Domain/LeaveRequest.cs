@@ -7,18 +7,18 @@ using System.Threading.Tasks;
 
 namespace Domain
 {
-    public class Leave_Request : Base_Domain_Entity
+    public class LeaveRequest : BaseDomainEntity
     {
-        public DateTime Start_Date { get; set; }
-        public DateTime End_Date { get; set; }
-        public Leave_Type Leave_Type { get; set; }
-        public int Leave_TypeId{ get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime EndDate { get; set; }
+        public LeaveType LeaveType { get; set; }
+        public int LeaveTypeId{ get; set; }
 
-        public DateTime Date_Requested { get; set; }
+        public DateTime DateRequested { get; set; }
 
-        public string Request_Comments { get; set; }
+        public string RequestComments { get; set; }
 
-        public DateTime ? Date_Actioned { get; set; }  
+        public DateTime ? DateActioned { get; set; }  
 
         public bool ? Approved { get; set; }
 

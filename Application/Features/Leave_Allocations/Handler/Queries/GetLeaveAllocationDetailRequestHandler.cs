@@ -11,12 +11,12 @@ using System.Threading.Tasks;
 
 namespace Application.Features.Leave_Allocation.Handler.Queries
 {
-    public class Get_Leave_Allocation_Detail_Request_Handler : IRequestHandler<Get_Leave_Allocation_Detail_Request, Leave_Allocation_Dto>
+    public class GetLeaveAllocationDetailRequestHandler : IRequestHandler<GetLeaveAllocationDetail_Request, LeaveAllocationDto>
     {
-        private readonly ILeave_Allocation_Repository _Leave_Allocation_Repository;
+        private readonly ILeaveAllocationRepository _Leave_Allocation_Repository;
         private readonly IMapper _mapper;
 
-        public Get_Leave_Allocation_Detail_Request_Handler(ILeave_Allocation_Repository leave_Allocation_Repository, IMapper mapper)
+        public GetLeaveAllocationDetailRequestHandler(ILeaveAllocationRepository leave_Allocation_Repository, IMapper mapper)
         {
             _Leave_Allocation_Repository = leave_Allocation_Repository;
             _mapper = mapper;
@@ -24,11 +24,11 @@ namespace Application.Features.Leave_Allocation.Handler.Queries
         }
 
      
-        public async Task<Leave_Allocation_Dto> Handle(Get_Leave_Allocation_Detail_Request request, CancellationToken cancellationToken)
+        public async Task<LeaveAllocationDto> Handle(GetLeaveAllocationDetail_Request request, CancellationToken cancellationToken)
         {
             var leaveallocation = await _Leave_Allocation_Repository.Get_Leave_Allocation_With_Details(request.Id);
 
-            return _mapper.Map<Leave_Allocation_Dto>(leaveallocation);    
+            return _mapper.Map<LeaveAllocationDto>(leaveallocation);    
         }
     }
 }
